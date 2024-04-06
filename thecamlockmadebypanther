@@ -1,0 +1,104 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+local Window = Rayfield:CreateWindow({
+   Name = "Panther's Camlock Script",
+   LoadingTitle = "Panther's Cheats",
+   LoadingSubtitle = "by Panther And Tigy",
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "Big Hub"
+   },
+   Discord = {
+      Enabled = false,
+      Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   },
+   KeySystem = false, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "Untitled",
+      Subtitle = "Key System",
+      Note = "No method of obtaining the key is provided",
+      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = {"Hello"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+   }
+})
+local Tab = Window:CreateTab("Camlock", 4483362458) -- Title, Image
+local Section = Tab:CreateSection("Click "Load Camlock"")
+local Button = Tab:CreateButton({
+   Name = "Load Camlock",
+   Callback = function()
+
+
+getgenv().UseGui = true -- put this to false if u want the silent aim instead
+
+getgenv().silent = {
+   Settings = {
+    Enabled = true,
+    AimPart = "UpperTorso",
+    Prediction = 0.152848,
+    AutoPrediction = {
+     Enabled = true,
+     Type = "Math", -- Normal, Custom, Math
+      ping20_30 = 0.12588,
+      ping30_40 = 0.11911,
+      ping40_50 = 0.12471,
+      ping50_60 = 0.13766,
+      ping60_70 = 0.13731,
+      ping70_80 = 0.13951,
+      ping80_90 = 0.14181,
+      ping90_100 = 0.148,
+      ping100_110 = 0.156,
+      ping110_120 = 0.1567,
+      ping120_130 = 0.1601,
+      ping130_140 = 0.1637,
+      ping140_150 = 0.173,
+      ping150_160 = 0.1714,
+      ping160_170 = 0.1863,
+      ping170_180 = 0.1872,
+      ping180_190 = 0.1848,
+      ping190_200 = 0.1865,
+    },
+   },
+   FOV = {
+    Enabled = true,
+    Size = 33,
+    Filled = false,
+    Thickness = 0.66,
+    Transparency = 0.9,
+    Color = Color3.fromRGB(255,255,255),
+   },
+   Checks = {
+    KO = false, --- removed for now
+    Health = { --unlocks if below the set value.
+     Enabled = false,
+     Value = 5,
+    },
+    Wall = true,
+   },
+   Camlock = {
+	Enabled = false,
+	AimPart = "HumanoidRootPart",
+	AutoPrediction = false,
+	Prediction = {
+	 Horizontal = 0.152848,
+	 Vertical = 0.135,
+	},
+	Smoothness = 0.1,
+	Shake = {
+	 X = 0,
+	 Y = 0,
+	},
+   },
+}
+
+
+
+
+
+
+
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/44bb088471e9f1cb66c91b47b9d3b620.lua"))()
+   end,
+})
